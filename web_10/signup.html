@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title"><h1>회원가입</h1></div>
+        <!-- 이메일 -->
+        <div class="email">
+            <input id="email" type="text" placeholder="이메일 입력..">
+            <div id="emailError" class="error"></div>
+        </div>
+        <!-- 이름 -->
+        <div class="name">
+            <input id="name" type="text" placeholder="이름 입력..">
+            <div id="nameError" class="error"></div>
+        </div>
+        <!-- 비밀번호 -->
+        <div class="password">
+            <input id="password" type="password" placeholder="비밀번호 입력..">
+            <div id="passwordError" class="error"></div>
+        </div>
+        <!-- 비밀번호 확인 -->
+        <div class="passwordCheck">
+            <input id="passwordCheck" type="password" placeholder="비밀번호 재확인..">
+            <div id="passwordCheckError" class="error"></div>
+        </div>
+        <!-- 전화번호 입력 -->
+        <div class="phone">
+            <input id="phone1" type="text" size="1" maxlength="3" oninput="changePhon1()" placeholder="010"> -
+            <input id="phone2" type="text" size="2" maxlength="4" oninput="changePhon1()" placeholder="1234"> -
+            <input id="phone3" type="text" size="2" maxlength="4" oninput="changePhon1()" placeholder="5678">
+        </div>
+        <!-- 전화번호 인증 -->
+        <div class="auth">
+            <div id="authNumber">00000</div>
+            <button disabled id="sendMessage" onclick="getToken()">인증번호 발송</button>
+        </div>
+        <!-- 전화번호 인증 시간 -->
+        <div class="timer">
+            <div id="timerLimit">03:00</div>
+            <button disabled id="completion" onclick="checkCompletion()">인증 확인</button>
+        </div>
+        <!-- 지역 -->
+        <div class="area">
+            <select id="area">
+                <option disabled selected>지역 선택</option>
+                <option>서울</option>
+                <option>경기</option>
+                <option>충남</option>
+                <option>충북</option>
+                <option>경남</option>
+                <option>경북</option>
+                <option>전남</option>
+                <option>전북</option>
+                <option>공개 안함</option>
+            </select>
+            <div id="areaError" class="error"></div>
+        </div>
+        <!-- 성별 -->
+        <div class="gender">
+            <input id="genderMan" type="radio" name="gender">남성
+            <input id="genderWoman" type="radio" name="gender">여성
+            <div id="genderError" class="error"></div>
+        </div>
+        <!-- 선 -->
+        <div class="line">
+            <hr>
+        </div>
+        <!-- 가입하기 버튼 -->
+        <div class="signUp">
+            <button id="singUpButton" disabled onclick="signUpCheck()">가입하기</button>
+        </div>
+    </div>
+</body>
+</html>
