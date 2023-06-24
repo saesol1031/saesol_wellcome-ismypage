@@ -2,15 +2,73 @@
 <html>
 <head>
     <title>SOLWEB</title>
+    <link rel="stylesheet" href="signdown.css">
     <meta charset="utf-8">
     <style>
-        h1{
-            color: rgb(0, 0, 0);
-            font-size:100px;
+        h1{font-size:100px;
+            border-bottom: 3px black solid;
+            padding-bottom: 30px;
+            text-align: center;
         }
+
+        h2{
+            text-align: center;
+        }
+
+
     </style>
+
+    <script>
+        function a() {
+        alert("로그인 되었습니다.")
+        location.href='main.html'
+        }
+
+        function b() {
+        location.href='signup.html'
+        }
+    </script>
+
 </head>
 <body>
-<h1 style="text-align: center;">SOLWEB</h1>
+    <!-- 시도1 -->
+    <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link href="signup.css" rel="stylesheet">
+    <script src="signup.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title"><h1 style="font-size: 21px;">SOLWEB</h1></div>
+        <div class="email">
+            <h3>이메일:</h3>
+            <input id="email" type="text" placeholder="이메일 입력..">
+            <div id="emailError" class="error"></div>
+        </div>
+        <div class="password">
+            <h3>비밀번호:</h3>
+            <input id="password" type="password" placeholder="비밀번호 입력..">
+            <div id="passwordError" class="error"></div>
+        </div>
+
+        <div class="line">
+            <hr>
+        </div>
+        <div class="signUp">
+            <button id="signUpButton" onclick="a()">로그인</button>
+            <button id="signUpButton" onclick="b()">회원가입</button>
+        </div>
+    </div>
+<!-- 시도 끝 -->
+</body>
+
+</html>
+</div>
 </body>
 </html>
+
